@@ -1,0 +1,35 @@
+@import url("../fonts/MiamaNueva/MiamaNueva.css");
+@import url("../fonts/AtypDisplay/AtypDisplay.css");
+@import url("../fonts/LucianSchoenschrift/Lucian-Schoenschrift.css");
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Atyp Display", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+
+  border: none;
+  outline: none;
+  background: none;
+}
+
+ul {
+  list-style: none;
+}
+
+#root {
+  width: min(100%, 1920px);
+  margin-inline: auto;
+}

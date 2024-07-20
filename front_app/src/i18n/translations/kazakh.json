@@ -1,0 +1,45 @@
+{
+  "header.nav.coming": "Шақыру",
+  "header.nav.day": "Күні",
+  "header.nav.address": "Мекенжай",
+  "header.nav.form": "Анкета",
+
+  "main.saturday": "сенбі",
+  "main.september": "қыркүйек",
+
+  "about.title": "Құрметті ағайын-туыс, нағашылар, <br /> құда-жекжат, бауырлар, дос- <br /> жарандар, көршілер және әріптестер!",
+  "about.subtitle": "Cіздерді <br /> <span>Мухаметали мен Аружанның</span> <br /> үйлену тойына арналған салтанатты ақ дастарханымыздың қадірлі қонағы болуға шақырамыз!",
+
+  "ceremony.title": "Той салтанаты:",
+  "ceremony.september": "Қыркүйек",
+  "ceremony.start": "Басталуы:",
+  "ceremony.weeks.1": "дс",
+  "ceremony.weeks.2": "сс",
+  "ceremony.weeks.3": "ср",
+  "ceremony.weeks.4": "бс",
+  "ceremony.weeks.5": "жм",
+  "ceremony.weeks.6": "сн",
+  "ceremony.weeks.7": "жс",
+
+  "address.title": "Мекен-жайымыз:",
+  "address.content.slice_1": "Тараз қаласы,",
+  "address.content.slice_2": "Абай даңғылы, 120",
+  "address.content.slice_3": "“Сәтті”",
+  "address.content.slice_4": "мейрамханасы",
+
+  "form.title": "Тойға қатысуыңызды растауыңызды сұраймыз!",
+  "form.subtitle": "Аты-жөніңіз (жұбыңызбен келетін болсаңыз, есімдеріңізді бірге жазуыңызды өтінеміз)",
+  "form.placeholder": "Аты-жөніңіз",
+  "form.coming": "Келемін",
+  "form.with-pair": "Жұбыммен келемін",
+  "form.no-coming": "Өкінішке орай, қатыса алмаймын",
+  "form.submit": "Жіберу",
+
+  "gallery.title": "Фотоальбом",
+
+  "owners.title": "Той иелері:",
+  "owners.names": "Жандарбек - Қарлығаш",
+  "owners.subtitle": "Келіңіздер, тойымыздың қадірлі қонағы болыңыздар!",
+
+  "modal.success.title": "Рахмет, жауабыңыз жіберілді!"
+}

@@ -1,0 +1,45 @@
+{
+  "header.nav.coming": "Приглашение",
+  "header.nav.day": "Дата",
+  "header.nav.address": "Адрес",
+  "header.nav.form": "Анкета",
+
+  "main.saturday": "суббота",
+  "main.september": "сентябрь",
+
+  "about.title": "",
+  "about.subtitle": "Дорогие гости, приглашаем <br/> Вас стать дорогим гостем свадьбы <br /> <span>Мухаметали и Аружан!</span>",
+
+  "ceremony.title": "Свадебная церемония:",
+  "ceremony.september": "Сентябрь",
+  "ceremony.start": "Начало:",
+  "ceremony.weeks.1": "пн",
+  "ceremony.weeks.2": "вт",
+  "ceremony.weeks.3": "ср",
+  "ceremony.weeks.4": "чт",
+  "ceremony.weeks.5": "пт",
+  "ceremony.weeks.6": "сб",
+  "ceremony.weeks.7": "вс",
+
+  "address.title": "Адрес:",
+  "address.content.slice_1": "город Тараз,",
+  "address.content.slice_2": "Проспект Абая, 120",
+  "address.content.slice_3": "“Сәтті”",
+  "address.content.slice_4": "ресторан",
+
+  "form.title": "Пожалуйста подтвердите <br/> Ваше участие!",
+  "form.subtitle": "(если вы будете с партнером, пожалуйста, напишите ваши имена вместе)",
+  "form.placeholder": "Имя Фамилия",
+  "form.coming": "Приду",
+  "form.with-pair": "Я приду с партнером",
+  "form.no-coming": "К сожалению, я не смогу принять участие",
+  "form.submit": "Отправить",
+
+  "gallery.title": "Фотоальбом",
+
+  "owners.title": "Организаторы:",
+  "owners.names": "Жандарбек - Қарлығаш",
+  "owners.subtitle": "Приходите, будьте почетным гостем нашей свадьбы!",
+
+  "modal.success.title": "Спасибо, Ваш ответ отправлен!"
+}
