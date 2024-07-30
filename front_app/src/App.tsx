@@ -1,6 +1,6 @@
 import cn from "classnames";
 import { useTranslation } from "react-i18next";
-import {  createRef, useState, type FunctionComponent } from "react";
+import { FormEvent, createRef, useState, type FunctionComponent } from "react";
 import styles from "@/App.module.scss";
 import CeremonyIcon from "@/assets/icons/ceremony.svg?react";
 import CakeIcon from "@/assets/icons/cake.svg?react";
@@ -9,19 +9,15 @@ import CameraIcon from "@/assets/icons/camera.svg?react";
 import PlayerIcon from "@/assets/icons/player.svg?react";
 import CircledChevronLeftIcon from "@/assets/icons/circled-chevron-left.svg?react";
 import CircledChevronRightIcon from "@/assets/icons/circled-chevron-right.svg?react";
-import FormImage from "@/assets/images/form/ali-aru.webp";
+import FormImage from "@/assets/images/form/dinmukhamed-maral.webp";
 import Gallery1Image from "@/assets/images/gallery/1.webp";
-import Gallery2Image from "@/assets/images/gallery/2.webp";
-import Gallery3Image from "@/assets/images/gallery/3.webp";
 import Gallery4Image from "@/assets/images/gallery/4.webp";
 import Gallery5Image from "@/assets/images/gallery/5.webp";
-import Gallery6Image from "@/assets/images/gallery/6.webp";
-import Audio from "@/assets/audios/audio.m4a";
+import Audio from "@/assets/audios/audio.mp3";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation ,Autoplay} from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import "swiper/css";
 import i18n from "./i18n";
-import { sendForm } from "./api/form";
 
 export const App: FunctionComponent = () => {
   const { t } = useTranslation();
@@ -50,12 +46,11 @@ export const App: FunctionComponent = () => {
 
     // Проверяем, что элементы формы существуют перед отправкой данных
     if (nameInput && comingInput && withPairInput && noComingInput) {
-      await sendForm({ name: nameInput.value, count: getInvitation() });
       setIsOpenedModal(true);
 
       setTimeout(() => {
         setIsOpenedModal(false);
-      }, 5000);
+      }, 3000);
     }
   };
 
@@ -159,7 +154,7 @@ export const App: FunctionComponent = () => {
 
         <div className={styles["main__subtitle"]}>
           <p>{t("main.saturday")}</p>
-          <span>07</span>
+          <span>10</span>
           <p>{t("main.september")}</p>
         </div>
       </section>
@@ -182,7 +177,7 @@ export const App: FunctionComponent = () => {
         </div>
 
         <h2 className={styles["ceremony__title"]}>{t("ceremony.title")}</h2>
-        <h2 className={styles["ceremony__date"]}>07.09.24</h2>
+        <h2 className={styles["ceremony__date"]}>10.09.24</h2>
 
         <div className={styles["ceremony-calendar"]}>
           <h2 className={styles["ceremony-calendar__title"]}>{t("ceremony.september")}</h2>
@@ -190,37 +185,37 @@ export const App: FunctionComponent = () => {
           <ul className={styles["ceremony-calendar__days"]}>
             <li className={styles["ceremony-calendar__day"]}>
               <span>{t("ceremony.weeks.1")}</span>
-              <span>2</span>
+              <span>9</span>
             </li>
 
-            <li className={styles["ceremony-calendar__day"]}>
+            <li className={cn(styles["ceremony-calendar__day"], styles["active"])}>
               <span>{t("ceremony.weeks.2")}</span>
-              <span>3</span>
+              <span>10</span>
             </li>
 
             <li className={styles["ceremony-calendar__day"]}>
               <span>{t("ceremony.weeks.3")}</span>
-              <span>4</span>
+              <span>11</span>
             </li>
 
             <li className={styles["ceremony-calendar__day"]}>
               <span>{t("ceremony.weeks.4")}</span>
-              <span>5</span>
+              <span>12</span>
             </li>
 
             <li className={styles["ceremony-calendar__day"]}>
               <span>{t("ceremony.weeks.5")}</span>
-              <span>6</span>
+              <span>13</span>
             </li>
 
-            <li className={cn(styles["ceremony-calendar__day"], styles["active"])}>
+            <li className={styles["ceremony-calendar__day"]}>
               <span>{t("ceremony.weeks.6")}</span>
-              <span>7</span>
+              <span>14</span>
             </li>
 
             <li className={styles["ceremony-calendar__day"]}>
               <span>{t("ceremony.weeks.7")}</span>
-              <span>8</span>
+              <span>15</span>
             </li>
           </ul>
         </div>
@@ -246,7 +241,9 @@ export const App: FunctionComponent = () => {
 
         <div className={styles["address__map"]}>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d868.8668546233866!2d71.38092755047171!3d42.90433309466759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38a703ea01147721%3A0x47d829d02ba5b0a5!2z0KDQtdGB0YLQvtGA0LDQvSDQodOZ0YLRgtGW!5e0!3m2!1sru!2skz!4v1719849665449!5m2!1sru!2skz"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d702.4651668294911!2d76.80074025397187!3d43.17767709187527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38835d26127415f1%3A0xc26cfba709953139!2z0KHQsNC80LjRgCDQvNC10LnRgNCw0LzRhdCw0L3QsNGB0Ys!5e0!3m2!1sru!2skz!4v1721392740116!5m2!1sru!2skz"
+            width="600" 
+            height="450"  
             style={{ border: "0" }}
             allowFullScreen
             loading="lazy"
@@ -254,6 +251,8 @@ export const App: FunctionComponent = () => {
           ></iframe>
         </div>
       </section>
+
+
 
       <section ref={anketaRef} id="anketa" className={styles["form"]}>
         <div className={styles["form__icon"]}>
@@ -341,25 +340,14 @@ export const App: FunctionComponent = () => {
             },
           }}
           spaceBetween={50}
-          autoplay={{
-            delay: 2000,
-          }}
-          speed={3000}
-          loop
           slidesPerView={3}
           className={styles["swiper"]}
           allowTouchMove
-          modules={[Navigation,Autoplay]}
+          modules={[Navigation]}
           navigation={{ nextEl: "#swiper-next", prevEl: "#swiper-prev" }}
         >
           <SwiperSlide className={styles["swiper__item"]}>
             <img className={styles["swiper__image"]} src={Gallery1Image} alt="" />
-          </SwiperSlide>
-          <SwiperSlide className={styles["swiper__item"]}>
-            <img className={styles["swiper__image"]} src={Gallery2Image} alt="" />
-          </SwiperSlide>
-          <SwiperSlide className={styles["swiper__item"]}>
-            <img className={styles["swiper__image"]} src={Gallery3Image} alt="" />
           </SwiperSlide>
           <SwiperSlide className={styles["swiper__item"]}>
             <img className={styles["swiper__image"]} src={Gallery4Image} alt="" />
@@ -367,9 +355,7 @@ export const App: FunctionComponent = () => {
           <SwiperSlide className={styles["swiper__item"]}>
             <img className={styles["swiper__image"]} src={Gallery5Image} alt="" />
           </SwiperSlide>
-          <SwiperSlide className={styles["swiper__item"]}>
-            <img className={styles["swiper__image"]} src={Gallery6Image} alt="" />
-          </SwiperSlide>
+          
         </Swiper>
 
         <div className={styles["swiper-actions"]}>
