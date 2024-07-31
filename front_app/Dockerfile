@@ -19,14 +19,22 @@ RUN npm run build
 # Stage 2: Serve the application with Nginx
 FROM nginx:alpine
 
+# Remove default Nginx configuration file
+RUN rm /etc/nginx/conf.d/default.conf
+
 # Copy the build output to Nginx's html directory
 COPY --from=build /app/build /usr/share/nginx/html
 
 # Copy custom Nginx configuration file
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY nginx.conf /etc/nginx/conf.d/
 
-# Expose the necessary port
+# Copy SSL certificates
+COPY /etc/letsencrypt/live/dinmukhamed-maral.kz/fullchain.pem /etc/ssl/certs/fullchain.pem
+COPY /etc/letsencrypt/live/dinmukhamed-maral.kz/privkey.pem /etc/ssl/private/privkey.pem
+
+# Expose the necessary ports
 EXPOSE 80
+EXPOSE 443
 
 # Command to run Nginx
 CMD ["nginx", "-g", "daemon off;"]
