@@ -9,20 +9,20 @@ RUN npm install
 COPY . .
 RUN npm run build
 
-# Stage 2: Serve the application with Nginx
 FROM nginx:alpine
 
-# Install necessary packages for SSL
 RUN apk add --no-cache openssl
 
-# Copy the build output to Nginx's html directory
+
 COPY --from=build /app/build /usr/share/nginx/html
 
-# Copy custom Nginx configuration file
-COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# Expose ports for HTTP and HTTPS
+COPY nginx.conf /etc/nginx/nginx.conf
+
+
+COPY default.conf /etc/nginx/conf.d/default.conf
+
+
 EXPOSE 80 443
 
-# Command to run the Nginx server
 CMD ["nginx", "-g", "daemon off;"]
