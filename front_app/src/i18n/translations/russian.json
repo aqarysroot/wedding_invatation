@@ -4,11 +4,11 @@
   "header.nav.address": "Адрес",
   "header.nav.form": "Анкета",
 
-  "main.saturday": "суббота",
-  "main.september": "сентябрь",
+  "main.saturday": "Суббота",
+  "main.september": "Сентябрь",
 
   "about.title": "",
-  "about.subtitle": "Дорогие гости, приглашаем <br/> Вас стать дорогим гостем свадьбы <br /> <span>Мухаметали и Аружан!</span>",
+  "about.subtitle": "Дорогие гости, приглашаем <br/> Вас стать дорогим гостем свадьбы <br /> <span>Динмухамед и Марал!</span>",
 
   "ceremony.title": "Свадебная церемония:",
   "ceremony.september": "Сентябрь",
@@ -22,14 +22,14 @@
   "ceremony.weeks.7": "вс",
 
   "address.title": "Адрес:",
-  "address.content.slice_1": "город Тараз,",
-  "address.content.slice_2": "Проспект Абая, 120",
-  "address.content.slice_3": "“Сәтті”",
+  "address.content.slice_1": "город Алматы,",
+  "address.content.slice_2": "Проспект Егинсу, 29/11",
+  "address.content.slice_3": "Самир",
   "address.content.slice_4": "ресторан",
 
   "form.title": "Пожалуйста подтвердите <br/> Ваше участие!",
   "form.subtitle": "(если вы будете с партнером, пожалуйста, напишите ваши имена вместе)",
-  "form.placeholder": "Имя Фамилия",
+  "form.placeholder": "Ваше имя",
   "form.coming": "Приду",
   "form.with-pair": "Я приду с партнером",
   "form.no-coming": "К сожалению, я не смогу принять участие",
@@ -38,7 +38,7 @@
   "gallery.title": "Фотоальбом",
 
   "owners.title": "Организаторы:",
-  "owners.names": "Жандарбек - Қарлығаш",
+  "owners.names": "Нурмухамед - Дильбар",
   "owners.subtitle": "Приходите, будьте почетным гостем нашей свадьбы!",
 
   "modal.success.title": "Спасибо, Ваш ответ отправлен!"
