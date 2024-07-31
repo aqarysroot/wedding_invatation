@@ -22,6 +22,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import i18n from "./i18n";
+import { sendForm } from "./api/form";
 
 export const App: FunctionComponent = () => {
   const { t } = useTranslation();
@@ -50,6 +51,7 @@ export const App: FunctionComponent = () => {
 
     // Проверяем, что элементы формы существуют перед отправкой данных
     if (nameInput && comingInput && withPairInput && noComingInput) {
+      await sendForm({ name: nameInput.value, count: getInvitation() });
       setIsOpenedModal(true);
 
       setTimeout(() => {
@@ -359,9 +361,9 @@ export const App: FunctionComponent = () => {
           <SwiperSlide className={styles["swiper__item"]}>
             <img className={styles["swiper__image"]} src={Gallery7Image} alt="" />
           </SwiperSlide>
-          <SwiperSlide className={styles["swiper__item"]}>
+          {/* <SwiperSlide className={styles["swiper__item"]}>
             <img className={styles["swiper__image"]} src={Gallery2Image} alt="" />
-          </SwiperSlide>
+          </SwiperSlide> */}
           <SwiperSlide className={styles["swiper__item"]}>
             <img className={styles["swiper__image"]} src={Gallery3Image} alt="" />
           </SwiperSlide>
