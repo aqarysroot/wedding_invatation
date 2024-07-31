@@ -26,7 +26,7 @@ RUN rm /etc/nginx/conf.d/default.conf
 COPY --from=build /app/build /usr/share/nginx/html
 
 # Copy custom Nginx configuration file
-COPY nginx.conf /etc/nginx/conf.d/
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Expose the necessary ports
 EXPOSE 80
