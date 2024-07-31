@@ -13,6 +13,10 @@ import FormImage from "@/assets/images/form/dinmukhamed-maral.webp";
 import Gallery1Image from "@/assets/images/gallery/1.webp";
 import Gallery4Image from "@/assets/images/gallery/4.webp";
 import Gallery5Image from "@/assets/images/gallery/5.webp";
+import Gallery2Image from "@/assets/images/gallery/2.webp";
+import Gallery3Image from "@/assets/images/gallery/3.webp";
+import Gallery6Image from "@/assets/images/gallery/6.webp";
+import Gallery7Image from "@/assets/images/gallery/7.webp";
 import Audio from "@/assets/audios/audio.mp3";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
@@ -350,10 +354,22 @@ export const App: FunctionComponent = () => {
             <img className={styles["swiper__image"]} src={Gallery1Image} alt="" />
           </SwiperSlide>
           <SwiperSlide className={styles["swiper__item"]}>
-            <img className={styles["swiper__image"]} src={Gallery4Image} alt="" />
+            <img className={styles["swiper__image"]} src={Gallery5Image} alt="" />
           </SwiperSlide>
           <SwiperSlide className={styles["swiper__item"]}>
-            <img className={styles["swiper__image"]} src={Gallery5Image} alt="" />
+            <img className={styles["swiper__image"]} src={Gallery7Image} alt="" />
+          </SwiperSlide>
+          <SwiperSlide className={styles["swiper__item"]}>
+            <img className={styles["swiper__image"]} src={Gallery2Image} alt="" />
+          </SwiperSlide>
+          <SwiperSlide className={styles["swiper__item"]}>
+            <img className={styles["swiper__image"]} src={Gallery3Image} alt="" />
+          </SwiperSlide>
+          <SwiperSlide className={styles["swiper__item"]}>
+            <img className={styles["swiper__image"]} src={Gallery6Image} alt="" />
+          </SwiperSlide>
+          <SwiperSlide className={styles["swiper__item"]}>
+            <img className={styles["swiper__image"]} src={Gallery4Image} alt="" />
           </SwiperSlide>
           
         </Swiper>
