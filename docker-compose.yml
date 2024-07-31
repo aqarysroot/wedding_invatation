@@ -43,7 +43,7 @@ services:
     volumes:
       - ./certbot/conf:/etc/letsencrypt
       - ./certbot/www:/var/www/certbot
-      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./front_app/nginx.conf:/etc/nginx/nginx.conf
     networks:
       - app-network
         
