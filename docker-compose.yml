@@ -46,7 +46,9 @@ services:
       - ./front_app/nginx.conf:/etc/nginx/nginx.conf
     networks:
       - app-network
-        
+    depends_on:
+      - flask_app
+
   certbot:
     image: certbot/certbot
     container_name: certbot
