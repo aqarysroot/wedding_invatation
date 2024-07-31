@@ -11,6 +11,29 @@ services:
       - "6000"
     networks:
       - app-network
+    environment:
+      - POSTGRES_USER=akarys
+      - POSTGRES_PASSWORD=Gerew321321321
+      - POSTGRES_DB=wedding
+      - DATABASE_URL=postgresql://akarys:Gerew321321321@postgres:5432/wedding
+    depends_on:
+      - postgres
+    entrypoint: ["/bin/sh", "/app/docker-entrypoint.sh"]
+
+  postgres:
+    image: postgres:13
+    container_name: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=akarys
+      - POSTGRES_PASSWORD=Gerew321321321
+      - POSTGRES_DB=wedding
+    networks:
+      - app-network
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
 
   frontend:
     build:
@@ -27,3 +50,6 @@ services:
 networks:
   app-network:
     driver: bridge
+
+volumes:
+  pgdata:
