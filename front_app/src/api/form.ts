@@ -6,6 +6,6 @@ type Data = {
 };
 
 export async function sendForm(data: Data) {
-  const response = await axios.post("http://185.22.65.111/api/toi_add", data);
+  const response = await axios.post("https://dinmukhamed-maral.kz/api/toi_add", data);
   return response.data;
 }
