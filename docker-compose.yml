@@ -18,7 +18,7 @@ services:
       - DATABASE_URL=postgresql://akarys:Gerew321321321@postgres:5432/wedding
     depends_on:
       - postgres
-    entrypoint: ["/bin/sh", "/app/docker-entrypoint.sh"]
+    entrypoint: ["/bin/sh", "/flask_app/docker-entrypoint.sh"]
 
   postgres:
     image: postgres:13
