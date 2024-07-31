@@ -42,7 +42,8 @@ services:
       - "443:443"
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf
-      - /etc/letsencrypt:/etc/letsencrypt
+      - /etc/letsencrypt/live/dinmukhamed-maral.kz/fullchain.pem:/etc/ssl/certs/fullchain.pem
+      - /etc/letsencrypt/live/dinmukhamed-maral.kz/privkey.pem:/etc/ssl/private/privkey.pem
     networks:
       - app-network
     depends_on:

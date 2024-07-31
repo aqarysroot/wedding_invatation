@@ -28,10 +28,6 @@ COPY --from=build /app/build /usr/share/nginx/html
 # Copy custom Nginx configuration file
 COPY nginx.conf /etc/nginx/conf.d/
 
-# Copy SSL certificates
-COPY /etc/letsencrypt/live/dinmukhamed-maral.kz/fullchain.pem /etc/ssl/certs/fullchain.pem
-COPY /etc/letsencrypt/live/dinmukhamed-maral.kz/privkey.pem /etc/ssl/private/privkey.pem
-
 # Expose the necessary ports
 EXPOSE 80
 EXPOSE 443
