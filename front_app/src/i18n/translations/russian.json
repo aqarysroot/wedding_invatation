@@ -20,6 +20,11 @@
   "ceremony.weeks.5": "пт",
   "ceremony.weeks.6": "сб",
   "ceremony.weeks.7": "вс",
+  "ceremony.countdown": "До свадебной церемонии осталось:",
+  "ceremony.count_day": "ДНЕЙ",
+  "ceremony.count_hour": "ЧАСОВ",
+  "ceremony.count_minute": "МИНУТ",
+  "ceremony.count_second": "СЕКУНД",
 
   "address.title": "Адрес:",
   "address.content.slice_1": "город Алматы,",

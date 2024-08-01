@@ -20,6 +20,11 @@
   "ceremony.weeks.5": "жм",
   "ceremony.weeks.6": "сн",
   "ceremony.weeks.7": "жс",
+  "ceremony.countdown": "Той салтанатына дейін қалған уақыт:",
+  "ceremony.count_day": "КҮН",
+  "ceremony.count_hour": "САҒАТ",
+  "ceremony.count_minute": "МИНУТ",
+  "ceremony.count_second": "СЕКУНД",
 
   "address.title": "Мекен-жайымыз:",
   "address.content.slice_1": "Алматы қаласы,",

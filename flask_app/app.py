@@ -19,6 +19,7 @@ class TOI(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80), nullable=False)
     count = db.Column(db.Integer, nullable=False)
+    description = db.Column(db.String(100), nullable=True)
 
 @app.route('/api/ip', methods=['GET'])
 def get_ip():
@@ -30,7 +31,12 @@ def add_toi():
     data = request.get_json()
     name = data.get('name')
     count = data.get('count')
-    new_toi = TOI(name=name, count=count)
+    map = {
+        0: "Не приду",
+        1: "Приду",
+        2: "Я приду с партнером"
+    }
+    new_toi = TOI(name=name, count=count, description=map.get(int(count), "Не валидный ответ"))
     db.session.add(new_toi)
     db.session.commit()
     response = {

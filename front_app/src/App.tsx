@@ -1,6 +1,6 @@
 import cn from "classnames";
 import { useTranslation } from "react-i18next";
-import { FormEvent, createRef, useState, type FunctionComponent } from "react";
+import { FormEvent, createRef, useState, useEffect, type FunctionComponent } from "react";
 import styles from "@/App.module.scss";
 import CeremonyIcon from "@/assets/icons/ceremony.svg?react";
 import CakeIcon from "@/assets/icons/cake.svg?react";
@@ -24,6 +24,7 @@ import "swiper/css";
 import i18n from "./i18n";
 import { sendForm } from "./api/form";
 
+
 export const App: FunctionComponent = () => {
   const { t } = useTranslation();
 
@@ -33,6 +34,31 @@ export const App: FunctionComponent = () => {
   const anketaRef = createRef<HTMLElement>();
 
   const [isOpenedModal, setIsOpenedModal] = useState(false);
+  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+
+  useEffect(() => {
+    const ceremonyDate = new Date('2024-09-10T18:00:00').getTime();
+
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const distance = ceremonyDate - now;
+
+      if (distance < 0) {
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      setTimeLeft({ days, hours, minutes, seconds });
+    };
+
+    const interval = setInterval(updateCountdown, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   const handleSubmit = async (event: any) => {
     event.preventDefault();
@@ -230,6 +256,31 @@ export const App: FunctionComponent = () => {
           <p>{t("ceremony.start")}</p>
           <span>18:00</span>
         </div>
+
+        <div className={styles.ceremony}>
+        <div className={styles.ceremony__icon}>
+          {/* Ceremony Icon */}
+        </div>
+        <h2 className={styles.ceremony__title}>{t("ceremony.countdown")}</h2>
+        <div className={styles.countdownWrapper}>
+          <div className={styles.countdownItem}>
+            <span className={styles.countdownTime}>{timeLeft.days}</span>
+            <span className={styles.countdownLabel}>{t("ceremony.count_day")}</span>
+          </div>
+          <div className={styles.countdownItem}>
+            <span className={styles.countdownTime}>{timeLeft.hours}</span>
+            <span className={styles.countdownLabel}>{t("ceremony.count_hour")}</span>
+          </div>
+          <div className={styles.countdownItem}>
+            <span className={styles.countdownTime}>{timeLeft.minutes}</span>
+            <span className={styles.countdownLabel}>{t("ceremony.count_minute")}</span>
+          </div>
+          <div className={styles.countdownItem}>
+            <span className={styles.countdownTime}>{timeLeft.seconds}</span>
+            <span className={styles.countdownLabel}>{t("ceremony.count_second")}</span>
+          </div>
+        </div>
+      </div>
       </section>
 
       <section ref={addressRef} id="address" className={styles["address"]}>

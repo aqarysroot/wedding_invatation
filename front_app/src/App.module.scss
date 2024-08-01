@@ -262,6 +262,7 @@
 
   &__title {
     margin-top: 32px;
+    margin-bottom: 20px;
   }
 
   &__date {
@@ -794,4 +795,32 @@
     line-height: clamp(1.375rem, 2.75vw + 0.825rem, 4.125rem);
     text-align: center;
   }
+}
+
+.countdownWrapper {
+  display: flex;
+  justify-content: center; // Center items horizontally
+  gap: 2rem; // Space between countdown items
+}
+
+.countdownItem {
+  display: flex;
+  flex-direction: column; // Stack number and label vertically
+  align-items: center; // Center align number and label
+  text-align: center; // Center text alignment
+}
+
+.countdownTime {
+  font-family: "Atyp Display", sans-serif;
+  font-size: clamp(2rem, 5vw, 5rem);
+  color: #ad8955;
+  margin: 0; // Reset default margin
+}
+
+.countdownLabel {
+  font-family: "Miama Nueva", sans-serif;
+  font-size: clamp(1rem, 2vw, 2rem);
+  color: #000;
+  font-style: italic;
+  margin: 0; // Reset default margin
 }
