@@ -38,7 +38,7 @@ export const App: FunctionComponent = () => {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
-    const ceremonyDate = new Date('2024-11-23T18:00:00').getTime();
+    const ceremonyDate = new Date('2024-11-23T17:00:00').getTime();
 
     const updateCountdown = () => {
       const now = new Date().getTime();
@@ -255,7 +255,7 @@ export const App: FunctionComponent = () => {
 
         <div className={styles["ceremony__time"]}>
           <p>{t("ceremony.start")}</p>
-          <span>18:00</span>
+          <span>17:00</span>
         </div>
 
         <div className={styles.ceremony}>
@@ -292,9 +292,9 @@ export const App: FunctionComponent = () => {
         <h2 className={styles["address__title"]}>{t("address.title")}</h2>
         <div className={styles["address__content"]}>
           <p>{t("address.content.slice_1")}</p>
-          <p>{t("address.content.slice_2")}</p>
+          <p style={{ marginTop: '-10px'}}>{t("address.content.slice_2")}</p>
           <p className={styles["colored"]}>{t("address.content.slice_3")}</p>
-          <p>{t("address.content.slice_4")}</p>
+          <p className={styles["colored__subtitle"]}>{t("address.content.slice_4")}</p>
         </div>
 
         <div className={styles["address__map"]}>
