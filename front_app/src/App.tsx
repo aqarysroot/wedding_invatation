@@ -23,6 +23,7 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import i18n from "./i18n";
 import { sendForm } from "./api/form";
+import Map from "@/components/Map.tsx";
 
 
 export const App: FunctionComponent = () => {
@@ -37,7 +38,7 @@ export const App: FunctionComponent = () => {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
-    const ceremonyDate = new Date('2024-09-10T18:00:00').getTime();
+    const ceremonyDate = new Date('2024-11-23T18:00:00').getTime();
 
     const updateCountdown = () => {
       const now = new Date().getTime();
@@ -181,12 +182,12 @@ export const App: FunctionComponent = () => {
 
       <section className={styles["main"]}>
         <h1 className={styles["main__title"]}>
-          Dinmukhamed <br /> & <br /> Maral
+          Arnur <br /> & <br /> Zhanerke
         </h1>
 
         <div className={styles["main__subtitle"]}>
           <p>{t("main.saturday")}</p>
-          <span>10</span>
+          <span>23</span>
           <p>{t("main.september")}</p>
         </div>
       </section>
@@ -209,7 +210,7 @@ export const App: FunctionComponent = () => {
         </div>
 
         <h2 className={styles["ceremony__title"]}>{t("ceremony.title")}</h2>
-        <h2 className={styles["ceremony__date"]}>10.09.24</h2>
+        <h2 className={styles["ceremony__date"]}>23.11.24</h2>
 
         <div className={styles["ceremony-calendar"]}>
           <h2 className={styles["ceremony-calendar__title"]}>{t("ceremony.september")}</h2>
@@ -217,37 +218,37 @@ export const App: FunctionComponent = () => {
           <ul className={styles["ceremony-calendar__days"]}>
             <li className={styles["ceremony-calendar__day"]}>
               <span>{t("ceremony.weeks.1")}</span>
-              <span>9</span>
+              <span>18</span>
             </li>
 
-            <li className={cn(styles["ceremony-calendar__day"], styles["active"])}>
+            <li className={cn(styles["ceremony-calendar__day"])}>
               <span>{t("ceremony.weeks.2")}</span>
-              <span>10</span>
+              <span>19</span>
             </li>
 
             <li className={styles["ceremony-calendar__day"]}>
               <span>{t("ceremony.weeks.3")}</span>
-              <span>11</span>
+              <span>20</span>
             </li>
 
             <li className={styles["ceremony-calendar__day"]}>
               <span>{t("ceremony.weeks.4")}</span>
-              <span>12</span>
+              <span>21</span>
             </li>
 
             <li className={styles["ceremony-calendar__day"]}>
               <span>{t("ceremony.weeks.5")}</span>
-              <span>13</span>
+              <span>22</span>
             </li>
 
-            <li className={styles["ceremony-calendar__day"]}>
+            <li className={cn(styles["ceremony-calendar__day"], styles["active"])}>
               <span>{t("ceremony.weeks.6")}</span>
-              <span>14</span>
+              <span>23</span>
             </li>
 
             <li className={styles["ceremony-calendar__day"]}>
               <span>{t("ceremony.weeks.7")}</span>
-              <span>15</span>
+              <span>24</span>
             </li>
           </ul>
         </div>
@@ -297,15 +298,7 @@ export const App: FunctionComponent = () => {
         </div>
 
         <div className={styles["address__map"]}>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d702.4651668294911!2d76.80074025397187!3d43.17767709187527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38835d26127415f1%3A0xc26cfba709953139!2z0KHQsNC80LjRgCDQvNC10LnRgNCw0LzRhdCw0L3QsNGB0Ys!5e0!3m2!1sru!2skz!4v1721392740116!5m2!1sru!2skz"
-            width="600" 
-            height="450"  
-            style={{ border: "0" }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
+          <Map />
         </div>
       </section>
 
@@ -378,65 +371,65 @@ export const App: FunctionComponent = () => {
         </div>
       )}
 
-      <section className={styles["gallery"]}>
-        <h2 className={styles["gallery__title"]}>{t("gallery.title")}</h2>
+      {/*<section className={styles["gallery"]}>*/}
+      {/*  <h2 className={styles["gallery__title"]}>{t("gallery.title")}</h2>*/}
 
-        <div className={styles["gallery__icon"]}>
-          <CameraIcon />
-        </div>
+      {/*  <div className={styles["gallery__icon"]}>*/}
+      {/*    <CameraIcon />*/}
+      {/*  </div>*/}
 
-        <Swiper
-          breakpoints={{
-            768: {
-              spaceBetween: 50,
-              slidesPerView: 3,
-            },
-            0: {
-              spaceBetween: 50,
-              slidesPerView: 1,
-            },
-          }}
-          spaceBetween={50}
-          slidesPerView={3}
-          className={styles["swiper"]}
-          allowTouchMove
-          modules={[Navigation]}
-          navigation={{ nextEl: "#swiper-next", prevEl: "#swiper-prev" }}
-        >
-          <SwiperSlide className={styles["swiper__item"]}>
-            <img className={styles["swiper__image"]} src={Gallery1Image} alt="" />
-          </SwiperSlide>
-          <SwiperSlide className={styles["swiper__item"]}>
-            <img className={styles["swiper__image"]} src={Gallery5Image} alt="" />
-          </SwiperSlide>
-          <SwiperSlide className={styles["swiper__item"]}>
-            <img className={styles["swiper__image"]} src={Gallery7Image} alt="" />
-          </SwiperSlide>
-          {/* <SwiperSlide className={styles["swiper__item"]}>
-            <img className={styles["swiper__image"]} src={Gallery2Image} alt="" />
-          </SwiperSlide> */}
-          <SwiperSlide className={styles["swiper__item"]}>
-            <img className={styles["swiper__image"]} src={Gallery3Image} alt="" />
-          </SwiperSlide>
-          <SwiperSlide className={styles["swiper__item"]}>
-            <img className={styles["swiper__image"]} src={Gallery6Image} alt="" />
-          </SwiperSlide>
-          <SwiperSlide className={styles["swiper__item"]}>
-            <img className={styles["swiper__image"]} src={Gallery4Image} alt="" />
-          </SwiperSlide>
-          
-        </Swiper>
+      {/*  <Swiper*/}
+      {/*    breakpoints={{*/}
+      {/*      768: {*/}
+      {/*        spaceBetween: 50,*/}
+      {/*        slidesPerView: 3,*/}
+      {/*      },*/}
+      {/*      0: {*/}
+      {/*        spaceBetween: 50,*/}
+      {/*        slidesPerView: 1,*/}
+      {/*      },*/}
+      {/*    }}*/}
+      {/*    spaceBetween={50}*/}
+      {/*    slidesPerView={3}*/}
+      {/*    className={styles["swiper"]}*/}
+      {/*    allowTouchMove*/}
+      {/*    modules={[Navigation]}*/}
+      {/*    navigation={{ nextEl: "#swiper-next", prevEl: "#swiper-prev" }}*/}
+      {/*  >*/}
+      {/*    <SwiperSlide className={styles["swiper__item"]}>*/}
+      {/*      <img className={styles["swiper__image"]} src={Gallery1Image} alt="" />*/}
+      {/*    </SwiperSlide>*/}
+      {/*    <SwiperSlide className={styles["swiper__item"]}>*/}
+      {/*      <img className={styles["swiper__image"]} src={Gallery5Image} alt="" />*/}
+      {/*    </SwiperSlide>*/}
+      {/*    <SwiperSlide className={styles["swiper__item"]}>*/}
+      {/*      <img className={styles["swiper__image"]} src={Gallery7Image} alt="" />*/}
+      {/*    </SwiperSlide>*/}
+      {/*    /!* <SwiperSlide className={styles["swiper__item"]}>*/}
+      {/*      <img className={styles["swiper__image"]} src={Gallery2Image} alt="" />*/}
+      {/*    </SwiperSlide> *!/*/}
+      {/*    <SwiperSlide className={styles["swiper__item"]}>*/}
+      {/*      <img className={styles["swiper__image"]} src={Gallery3Image} alt="" />*/}
+      {/*    </SwiperSlide>*/}
+      {/*    <SwiperSlide className={styles["swiper__item"]}>*/}
+      {/*      <img className={styles["swiper__image"]} src={Gallery6Image} alt="" />*/}
+      {/*    </SwiperSlide>*/}
+      {/*    <SwiperSlide className={styles["swiper__item"]}>*/}
+      {/*      <img className={styles["swiper__image"]} src={Gallery4Image} alt="" />*/}
+      {/*    </SwiperSlide>*/}
+      {/*    */}
+      {/*  </Swiper>*/}
 
-        <div className={styles["swiper-actions"]}>
-          <button type="button" id="swiper-prev" className={styles["swiper-actions__button"]}>
-            <CircledChevronLeftIcon />
-          </button>
+      {/*  <div className={styles["swiper-actions"]}>*/}
+      {/*    <button type="button" id="swiper-prev" className={styles["swiper-actions__button"]}>*/}
+      {/*      <CircledChevronLeftIcon />*/}
+      {/*    </button>*/}
 
-          <button type="button" id="swiper-next" className={styles["swiper-actions__button"]}>
-            <CircledChevronRightIcon />
-          </button>
-        </div>
-      </section>
+      {/*    <button type="button" id="swiper-next" className={styles["swiper-actions__button"]}>*/}
+      {/*      <CircledChevronRightIcon />*/}
+      {/*    </button>*/}
+      {/*  </div>*/}
+      {/*</section>*/}
 
       <section className={styles["owners"]}>
         <h2 className={styles["owners__title"]}>{t("owners.title")}</h2>
