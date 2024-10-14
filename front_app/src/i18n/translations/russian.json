@@ -4,14 +4,14 @@
   "header.nav.address": "Адрес",
   "header.nav.form": "Анкета",
 
-  "main.saturday": "Вторник",
-  "main.september": "Сентябрь",
+  "main.saturday": "Суббота",
+  "main.september": "Ноябрь",
 
   "about.title": "",
-  "about.subtitle": "Дорогие гости, приглашаем <br/> Вас стать дорогим гостем свадьбы <br /> <span>Динмухамед и Марал!</span>",
+  "about.subtitle": "Дорогие гости, приглашаем <br/> Вас стать дорогим гостем свадьбы <br /> <span>Арнур и Жанерке!</span>",
 
   "ceremony.title": "Свадебная церемония:",
-  "ceremony.september": "Сентябрь",
+  "ceremony.september": "Ноябрь",
   "ceremony.start": "Начало:",
   "ceremony.weeks.1": "пн",
   "ceremony.weeks.2": "вт",
@@ -28,8 +28,8 @@
 
   "address.title": "Адрес:",
   "address.content.slice_1": "город Алматы,",
-  "address.content.slice_2": "Проспект Егинсу, 29/11",
-  "address.content.slice_3": "Самир",
+  "address.content.slice_2": "Улица Каратоган, 2",
+  "address.content.slice_3": "Manar Palace",
   "address.content.slice_4": "ресторан",
 
   "form.title": "Пожалуйста подтвердите <br/> Ваше участие!",
@@ -43,7 +43,7 @@
   "gallery.title": "Фотоальбом",
 
   "owners.title": "Организаторы:",
-  "owners.names": "Нурмухамед - Дильбар",
+  "owners.names": "Роман - Гульмира",
   "owners.subtitle": "Приходите, будьте почетным гостем нашей свадьбы!",
 
   "modal.success.title": "Спасибо, Ваш ответ отправлен!"

@@ -79,7 +79,8 @@
 }
 
 .main {
-  background-image: url("./assets/images/main/bg.webp");
+  //background: #c8a2c8;
+  background-image: url("./assets/images/main/w2.JPG");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -125,7 +126,8 @@
   }
 
   &__title {
-    color: #ebeaad;
+    color: saddlebrown;
+    //color: #b8860b;
     font-family: "Lucian Schoenschrift", sans-serif;
 
     font-size: clamp(3.75rem, 5.825vw + 2.385rem, 9.375rem);
@@ -143,7 +145,7 @@
     column-gap: 16px;
 
     span {
-      color: #ebeaad;
+      color: saddlebrown;
       font-family: "Miama Nueva", sans-serif;
       font-size: 42px;
       font-style: italic;
@@ -155,10 +157,10 @@
     }
 
     p {
-      border-top: 1px solid #ebeaad;
-      border-bottom: 1px solid #ebeaad;
+      border-top: 1px solid saddlebrown;
+      border-bottom: 1px solid saddlebrown;
 
-      color: #ebeaad;
+      color: saddlebrown;
       font-family: "Miama Nueva", sans-serif;
       font-size: 16px;
       font-style: italic;
@@ -230,7 +232,7 @@
 
     span {
       font-family: inherit;
-      color: #ad8955;
+      color: saddlebrown;
     }
   }
 }
@@ -267,7 +269,7 @@
 
   &__date {
     margin-top: 32px;
-    color: #ad8955;
+    color: saddlebrown;
   }
 
   &-calendar {
@@ -416,7 +418,7 @@
       font-weight: 300;
       line-height: clamp(1.875rem, 6.375vw + 0.6rem, 8.25rem);
       text-align: center;
-      
+
       &.colored {
         margin-top: 24px;
         font-family: "Miama Nueva", sans-serif;
@@ -728,6 +730,7 @@
   &__title {
     color: #000000;
   }
+
   &__names {
     color: #ad8955;
   }
@@ -756,11 +759,11 @@
   padding: 64px 32px;
   border-radius: 24px;
   box-shadow: 0 0 0 9999px #00000041;
-  
+
   @media (max-width: 768px) {
     padding: 32px;
     width: calc(100% - 24px);
-    
+
   }
 
 
@@ -773,14 +776,14 @@
     border-radius: 999px;
     border: 2px solid green;
 
-    
+
     svg {
       padding: 24px;
       box-sizing: content-box;
       width: 64px;
       height: 64px;
-      
-      @media (max-width: 768px) {  
+
+      @media (max-width: 768px) {
         width: 32px;
         height: 32px;
       }
