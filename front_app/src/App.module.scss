@@ -79,7 +79,98 @@
 }
 
 .main {
-  //background: #c8a2c8;
+  background-image: url("./assets/images/main/wedding-background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  padding-block: clamp(10rem, 2.5vw + 9.5rem, 12.5rem);
+
+  position: relative;
+  overflow: hidden;
+
+  &::before,
+  &::after {
+    content: " ";
+    position: absolute;
+
+    background-image: url("./assets/images/main/flower.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: clamp(7rem, 35vw - 1rem, 40rem); /* Пример уменьшения размеров */
+    height: clamp(5rem, 25vw - 1rem, 30rem);
+  }
+
+  &::before {
+    top: -20px;
+    right: -100px;
+
+    @media (max-width: 768px) {
+      top: 20px;
+      right: -32px;
+    }
+  }
+
+  &::after {
+    rotate: 180deg;
+    bottom: -20px;
+    left: -100px;
+
+    @media (max-width: 768px) {
+      bottom: 0;
+      left: -32px;
+    }
+  }
+
+  &__title {
+    color: saddlebrown;
+    font-family: "Lucian Schoenschrift", sans-serif;
+
+    font-size: clamp(3.75rem, 5.825vw + 2.385rem, 9.375rem);
+    font-weight: 400;
+    line-height: clamp(3.75rem, 5.825vw + 2.385rem, 9.375rem);
+    text-align: center;
+  }
+
+  &__subtitle {
+    margin-top: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 16px;
+
+    span {
+      color: #521e1e;
+      font-family: "Miama Nueva", sans-serif;
+      font-size: 42px;
+      font-style: italic;
+      font-weight: 700;
+      line-height: 72px;
+      text-align: center;
+
+      transform: translate(-6px, 12px);
+    }
+
+    p {
+      border-top: 1px solid saddlebrown;
+      border-bottom: 1px solid saddlebrown;
+
+      color: #521e1e;
+      font-family: "Miama Nueva", sans-serif;
+      font-size: 20px;
+      font-style: italic;
+      font-weight: 700;
+      line-height: 40px;
+      text-align: center;
+
+      width: min(100%, 90px);
+    }
+  }
+}
+.main__z {
   background-image: url("./assets/images/main/w2.JPG");
   background-position: center;
   background-repeat: no-repeat;
@@ -127,7 +218,6 @@
 
   &__title {
     color: saddlebrown;
-    //color: #b8860b;
     font-family: "Lucian Schoenschrift", sans-serif;
 
     font-size: clamp(3.75rem, 5.825vw + 2.385rem, 9.375rem);
@@ -145,11 +235,11 @@
     column-gap: 16px;
 
     span {
-      color: saddlebrown;
+      color: #521e1e;
       font-family: "Miama Nueva", sans-serif;
       font-size: 42px;
       font-style: italic;
-      font-weight: 400;
+      font-weight: 700;
       line-height: 72px;
       text-align: center;
 
@@ -160,11 +250,11 @@
       border-top: 1px solid saddlebrown;
       border-bottom: 1px solid saddlebrown;
 
-      color: saddlebrown;
+      color: #521e1e;
       font-family: "Miama Nueva", sans-serif;
-      font-size: 16px;
+      font-size: 20px;
       font-style: italic;
-      font-weight: 400;
+      font-weight: 700;
       line-height: 40px;
       text-align: center;
 
