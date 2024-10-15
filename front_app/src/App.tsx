@@ -346,9 +346,9 @@ export const App: FunctionComponent = () => {
             </button>
           </form>
 
-          <div className={styles["form-card__image"]}>
-            <img src={FormImage} alt="" />
-          </div>
+          {/*<div className={styles["form-card__image"]}>*/}
+          {/*  <img src={FormImage} alt="" />*/}
+          {/*</div>*/}
         </div>
       </section>
 
