@@ -46,5 +46,20 @@ def add_toi():
     }
     return jsonify(response), 200
 
+
+@app.route('/api/toi_list', methods=['GET'])
+def get_toi_list():
+    toi_list = TOI.query.all()
+    result = [
+        {
+            'id': toi.id,
+            'name': toi.name,
+            'count': toi.count,
+            'description': toi.description
+        } for toi in toi_list
+    ]
+    return jsonify(result), 200
+
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=6000)
