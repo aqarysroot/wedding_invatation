@@ -433,9 +433,7 @@ export const App: FunctionComponent = () => {
 
       <section className={styles["owners"]}>
         <h2 className={styles["owners__title"]}>{t("owners.title")}</h2>
-        <h2 style={{
-          marginTop: '-35px'
-        }} className={styles["owners__names"]}>{t("owners.names")}</h2>
+        <h2 className={styles["owners__names"]}>{t("owners.names")}</h2>
         <h2 className={styles["owners__subtitle"]}>{t("owners.subtitle")}</h2>
       </section>
     </>
