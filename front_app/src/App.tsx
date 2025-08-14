@@ -37,7 +37,7 @@ export const App: FunctionComponent = () => {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
-    const ceremonyDate = new Date('2024-09-10T18:00:00').getTime();
+    const ceremonyDate = new Date('2025-10-04T18:00:00').getTime();
 
     const updateCountdown = () => {
       const now = new Date().getTime();
