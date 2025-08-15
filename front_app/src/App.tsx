@@ -60,6 +60,44 @@ export const App: FunctionComponent = () => {
     return () => clearInterval(interval);
   }, []);
 
+
+useEffect(() => {
+  const LOADER_ID = 'dgis-widget-loader';
+  const ensureLoader = () => new Promise<void>((resolve)=>{
+    const existing = document.getElementById(LOADER_ID) as HTMLScriptElement | null;
+    if (existing){
+      if ((window as any).DGWidgetLoader) return resolve();
+      existing.addEventListener('load', ()=>resolve(), {once:true});
+      return;
+    }
+    const s = document.createElement('script');
+    s.id = LOADER_ID;
+    s.src = 'https://widgets.2gis.com/js/DGWidgetLoader.js';
+    s.async = true;
+    s.addEventListener('load', ()=>resolve(), {once:true});
+    document.body.appendChild(s);
+  });
+
+  const initMap = () => {
+    const W:any = window as any;
+    const holder = document.getElementById('dg-map');
+    if (!holder || !W.DGWidgetLoader) return;
+    holder.innerHTML = '';
+    new W.DGWidgetLoader({
+      widget: 'firmsonmap',
+      container: 'dg-map',
+      width: '100%',
+      height: '100%',
+      borderColor: '#ffffff',
+      pos: { lat: 43.245887, lon: 76.916869, zoom: 18 },
+      opt: { city: 'almaty', lang: 'ru' },
+      org: [{ id: '70000001100146442' }],
+    });
+  };
+
+  ensureLoader().then(initMap);
+}, []);
+
   const handleSubmit = async (event: any) => {
     event.preventDefault();
 
@@ -180,15 +218,23 @@ export const App: FunctionComponent = () => {
       </button>
 
       <section className={styles["main"]}>
-        <h1 className={styles["main__title"]}>
-          Dinmukhamed <br /> & <br /> Maral
-        </h1>
+<div className={styles.heroBg} />
 
-        <div className={styles["main__subtitle"]}>
-          <p>{t("main.saturday")}</p>
-          <span>10</span>
-          <p>{t("main.september")}</p>
-        </div>
+<div className={styles.inviteCard}>
+  <span className={styles.inviteLead}>СІЗДЕРДІ АЯУЛЫ ҚЫЗЫМЫЗ</span>
+  <h1 className={styles.inviteName}>Сымбаттың</h1>
+  <span className={styles.inviteDivider} aria-hidden="true" />
+  <p className={styles.inviteTail}>
+    ҰЗАТУ ТОЙЫНА АРНАЛҒАН САЛТАНАТТЫ АҚ ДАСТАРХАНЫМЫЗДЫҢ
+    СЫЙЛЫ ҚОНАҒЫ БОЛУҒА ШАҚЫРАМЫЗ!
+  </p>
+</div>
+
+<div className={styles.datePill}>
+  <span className={styles.dateWord}>{t("main.saturday")}</span>
+  <span className={styles.dateNum}>4</span>
+  <span className={styles.dateWord}>{t("main.october")}</span>
+</div>
       </section>
 
       <section ref={invitionRef} id="invition" className={styles["about"]}>
@@ -204,50 +250,47 @@ export const App: FunctionComponent = () => {
       </section>
 
       <section ref={dateRef} id="date" className={styles["ceremony"]}>
-        <div className={styles["ceremony__icon"]}>
-          <CeremonyIcon />
-        </div>
 
         <h2 className={styles["ceremony__title"]}>{t("ceremony.title")}</h2>
-        <h2 className={styles["ceremony__date"]}>10.09.24</h2>
+        <h2 className={styles["ceremony__date"]}>04.10.2025</h2>
 
         <div className={styles["ceremony-calendar"]}>
-          <h2 className={styles["ceremony-calendar__title"]}>{t("ceremony.september")}</h2>
+          <h2 className={styles["ceremony-calendar__title"]}>{t("ceremony.october")}</h2>
 
           <ul className={styles["ceremony-calendar__days"]}>
             <li className={styles["ceremony-calendar__day"]}>
               <span>{t("ceremony.weeks.1")}</span>
-              <span>9</span>
+              <span>30</span>
             </li>
 
-            <li className={cn(styles["ceremony-calendar__day"], styles["active"])}>
+            <li className={styles["ceremony-calendar__day"]}>
               <span>{t("ceremony.weeks.2")}</span>
-              <span>10</span>
+              <span>31</span>
             </li>
 
             <li className={styles["ceremony-calendar__day"]}>
               <span>{t("ceremony.weeks.3")}</span>
-              <span>11</span>
+              <span>1</span>
             </li>
 
             <li className={styles["ceremony-calendar__day"]}>
               <span>{t("ceremony.weeks.4")}</span>
-              <span>12</span>
+              <span>2</span>
             </li>
 
             <li className={styles["ceremony-calendar__day"]}>
               <span>{t("ceremony.weeks.5")}</span>
-              <span>13</span>
+              <span>3</span>
             </li>
 
-            <li className={styles["ceremony-calendar__day"]}>
+            <li className={cn(styles["ceremony-calendar__day"], styles["active"])}>
               <span>{t("ceremony.weeks.6")}</span>
-              <span>14</span>
+              <span>4</span>
             </li>
 
             <li className={styles["ceremony-calendar__day"]}>
               <span>{t("ceremony.weeks.7")}</span>
-              <span>15</span>
+              <span>5</span>
             </li>
           </ul>
         </div>
@@ -295,10 +338,10 @@ export const App: FunctionComponent = () => {
           <p className={styles["colored"]}>{t("address.content.slice_3")}</p>
           <p>{t("address.content.slice_4")}</p>
         </div>
-
+          
         <div className={styles["address__map"]}>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d702.4651668294911!2d76.80074025397187!3d43.17767709187527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38835d26127415f1%3A0xc26cfba709953139!2z0KHQsNC80LjRgCDQvNC10LnRgNCw0LzRhdCw0L3QsNGB0Ys!5e0!3m2!1sru!2skz!4v1721392740116!5m2!1sru!2skz"
+            src="https://www.google.com/maps?q=43.245887,76.916869&z=18&hl=ru&output=embed"
             width="600" 
             height="450"  
             style={{ border: "0" }}
@@ -352,10 +395,6 @@ export const App: FunctionComponent = () => {
               {t("form.submit")}
             </button>
           </form>
-
-          <div className={styles["form-card__image"]}>
-            <img src={FormImage} alt="" />
-          </div>
         </div>
       </section>
 
@@ -378,65 +417,6 @@ export const App: FunctionComponent = () => {
         </div>
       )}
 
-      <section className={styles["gallery"]}>
-        <h2 className={styles["gallery__title"]}>{t("gallery.title")}</h2>
-
-        <div className={styles["gallery__icon"]}>
-          <CameraIcon />
-        </div>
-
-        <Swiper
-          breakpoints={{
-            768: {
-              spaceBetween: 50,
-              slidesPerView: 3,
-            },
-            0: {
-              spaceBetween: 50,
-              slidesPerView: 1,
-            },
-          }}
-          spaceBetween={50}
-          slidesPerView={3}
-          className={styles["swiper"]}
-          allowTouchMove
-          modules={[Navigation]}
-          navigation={{ nextEl: "#swiper-next", prevEl: "#swiper-prev" }}
-        >
-          <SwiperSlide className={styles["swiper__item"]}>
-            <img className={styles["swiper__image"]} src={Gallery1Image} alt="" />
-          </SwiperSlide>
-          <SwiperSlide className={styles["swiper__item"]}>
-            <img className={styles["swiper__image"]} src={Gallery5Image} alt="" />
-          </SwiperSlide>
-          <SwiperSlide className={styles["swiper__item"]}>
-            <img className={styles["swiper__image"]} src={Gallery7Image} alt="" />
-          </SwiperSlide>
-          {/* <SwiperSlide className={styles["swiper__item"]}>
-            <img className={styles["swiper__image"]} src={Gallery2Image} alt="" />
-          </SwiperSlide> */}
-          <SwiperSlide className={styles["swiper__item"]}>
-            <img className={styles["swiper__image"]} src={Gallery3Image} alt="" />
-          </SwiperSlide>
-          <SwiperSlide className={styles["swiper__item"]}>
-            <img className={styles["swiper__image"]} src={Gallery6Image} alt="" />
-          </SwiperSlide>
-          <SwiperSlide className={styles["swiper__item"]}>
-            <img className={styles["swiper__image"]} src={Gallery4Image} alt="" />
-          </SwiperSlide>
-          
-        </Swiper>
-
-        <div className={styles["swiper-actions"]}>
-          <button type="button" id="swiper-prev" className={styles["swiper-actions__button"]}>
-            <CircledChevronLeftIcon />
-          </button>
-
-          <button type="button" id="swiper-next" className={styles["swiper-actions__button"]}>
-            <CircledChevronRightIcon />
-          </button>
-        </div>
-      </section>
 
       <section className={styles["owners"]}>
         <h2 className={styles["owners__title"]}>{t("owners.title")}</h2>

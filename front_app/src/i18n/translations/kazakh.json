@@ -6,12 +6,14 @@
 
   "main.saturday": "Сейсенбі",
   "main.september": "Қыркүйек",
+  "main.october": "Қазан",
 
   "about.title": "Құрметті ағайын-туыс, нағашылар, <br /> құда-жекжат, бауырлар, дос- <br /> жарандар, көршілер және әріптестер!",
-  "about.subtitle": "Cіздерді <br /> <span>Дінмұхамед - Марал</span> <br /> үйлену тойына арналған салтанатты ақ дастарханымыздың қадірлі қонағы болуға шақырамыз!",
+  "about.subtitle": "Сіздерді <br /> <span>Сымбаттың</span> <br /> ұзату тойына арналған салтанатты ақ дастарханымыздың қадірлі қонағы болуға шақырамыз!",
 
   "ceremony.title": "Той салтанаты:",
   "ceremony.september": "Қыркүйек",
+  "ceremony.october": "Қазан",
   "ceremony.start": "Басталуы:",
   "ceremony.weeks.1": "дс",
   "ceremony.weeks.2": "сс",
@@ -28,8 +30,8 @@
 
   "address.title": "Мекен-жайымыз:",
   "address.content.slice_1": "Алматы қаласы,",
-  "address.content.slice_2": "Егінсу даңғылы, 29/11",
-  "address.content.slice_3": "Самир",
+  "address.content.slice_2": "​Жамбыл, 154​",
+  "address.content.slice_3": "Parasat",
   "address.content.slice_4": "мейрамханасы",
 
   "form.title": "Тойға қатысуыңызды растауыңызды сұраймыз!",
@@ -43,7 +45,7 @@
   "gallery.title": "Фотоальбом",
 
   "owners.title": "Той иелері:",
-  "owners.names": "Нурмухамед - Дильбар",
+  "owners.names": "Саят-Салтанат",
   "owners.subtitle": "Келіңіздер, тойымыздың қадірлі қонағы болыңыздар!",
 
   "modal.success.title": "Рахмет, жауабыңыз жіберілді!"
