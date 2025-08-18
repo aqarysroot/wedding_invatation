@@ -11,7 +11,7 @@
   "about.title": "",
   "about.subtitle": "Дорогие гости, приглашаем <br/> Вас стать дорогим гостем торжества проводов невесты <br /> <span>Сымбат!</span>",
 
-  "ceremony.title": "Свадебная церемония:",
+  "ceremony.title": "Церемония Qyz uzatu:",
   "ceremony.september": "Сентябрь",
   "ceremony.october": "Октябрь",
   "ceremony.start": "Начало:",
@@ -22,7 +22,7 @@
   "ceremony.weeks.5": "пт",
   "ceremony.weeks.6": "сб",
   "ceremony.weeks.7": "вс",
-  "ceremony.countdown": "До свадебной церемонии осталось:",
+  "ceremony.countdown": "До церемонии Qyz uzatu осталось:",
   "ceremony.count_day": "ДНЕЙ",
   "ceremony.count_hour": "ЧАСОВ",
   "ceremony.count_minute": "МИНУТ",
@@ -46,7 +46,7 @@
 
   "owners.title": "Организаторы:",
   "owners.names": "Саят-Салтанат",
-  "owners.subtitle": "Приходите, будьте почетным гостем нашей свадьбы!",
+  "owners.subtitle": "Приходите, будьте почетным гостем нашей Qyz uzatu церемонии!",
 
   "modal.success.title": "Спасибо, Ваш ответ отправлен!"
 }
