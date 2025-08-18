@@ -221,13 +221,16 @@ useEffect(() => {
 <div className={styles.heroBg} />
 
 <div className={styles.inviteCard}>
-  <span className={styles.inviteLead}>СІЗДЕРДІ АЯУЛЫ ҚЫЗЫМЫЗ</span>
-  <h1 className={styles.inviteName}>Сымбаттың</h1>
-  <span className={styles.inviteDivider} aria-hidden="true" />
+  {/* <span className={styles.inviteLead}>СІЗДЕРДІ АЯУЛЫ ҚЫЗЫМЫЗ</span> */}
+  <h1 className={styles.inviteName}>Symbat</h1>
+  <br></br>
+  
+  <h1 className={styles.inviteName}>Qyz uzatu</h1>
+  {/* <span className={styles.inviteDivider} aria-hidden="true" />
   <p className={styles.inviteTail}>
     ҰЗАТУ ТОЙЫНА АРНАЛҒАН САЛТАНАТТЫ АҚ ДАСТАРХАНЫМЫЗДЫҢ
     СЫЙЛЫ ҚОНАҒЫ БОЛУҒА ШАҚЫРАМЫЗ!
-  </p>
+  </p> */}
 </div>
 
 <div className={styles.datePill}>
@@ -237,7 +240,7 @@ useEffect(() => {
 </div>
       </section>
 
-      <section ref={invitionRef} id="invition" className={styles["about"]}>
+      {/* <section ref={invitionRef} id="invition" className={styles["about"]}>
         <p
           className={styles["about__title"]}
           dangerouslySetInnerHTML={{ __html: t("about.title") }}
@@ -247,7 +250,7 @@ useEffect(() => {
           className={styles["about__subtitle"]}
           dangerouslySetInnerHTML={{ __html: t("about.subtitle") }}
         ></p>
-      </section>
+      </section> */}
 
       <section ref={dateRef} id="date" className={styles["ceremony"]}>
 
