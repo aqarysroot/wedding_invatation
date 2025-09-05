@@ -258,7 +258,7 @@ useEffect(() => {
         <h2 className={styles["ceremony__date"]}>13.09.2025</h2>
 
         <div className={styles["ceremony-calendar"]}>
-          <h2 className={styles["ceremony-calendar__title"]}>{t("ceremony.october")}</h2>
+          <h2 className={styles["ceremony-calendar__title"]}>{t("ceremony.september")}</h2>
 
           <ul className={styles["ceremony-calendar__days"]}>
             <li className={styles["ceremony-calendar__day"]}>
