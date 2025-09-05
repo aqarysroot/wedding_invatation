@@ -30,9 +30,9 @@
 
   "address.title": "Адрес:",
   "address.content.slice_1": "город Алматы,",
-  "address.content.slice_2": "​Улица Жамбыла, 154",
+  "address.content.slice_2": "​Улица Жамбыла, 154 Ресторан",
   "address.content.slice_3": "Parasat",
-  "address.content.slice_4": "ресторан",
+  "address.content.slice_4": "",
 
   "form.title": "Пожалуйста подтвердите <br/> Ваше участие!",
   "form.subtitle": "(если вы будете с партнером, пожалуйста, напишите ваши имена вместе)",
