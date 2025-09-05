@@ -16,7 +16,6 @@ import Gallery5Image from "@/assets/images/gallery/5.webp";
 import Gallery2Image from "@/assets/images/gallery/2.webp";
 import Gallery3Image from "@/assets/images/gallery/3.webp";
 import Gallery6Image from "@/assets/images/gallery/6.webp";
-import Gallery7Image from "@/assets/images/gallery/7.webp";
 import Audio from "@/assets/audios/audio.mp3";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
@@ -37,7 +36,7 @@ export const App: FunctionComponent = () => {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
-    const ceremonyDate = new Date('2025-09-13T17:00:00').getTime();
+    const ceremonyDate = new Date('2025-10-04T17:00:00').getTime();
 
     const updateCountdown = () => {
       const now = new Date().getTime();
@@ -255,45 +254,45 @@ useEffect(() => {
       <section ref={dateRef} id="date" className={styles["ceremony"]}>
 
         <h2 className={styles["ceremony__title"]}>{t("ceremony.title")}</h2>
-        <h2 className={styles["ceremony__date"]}>13.09.2025</h2>
+        <h2 className={styles["ceremony__date"]}>04.10.2025</h2>
 
         <div className={styles["ceremony-calendar"]}>
-          <h2 className={styles["ceremony-calendar__title"]}>{t("ceremony.september")}</h2>
+          <h2 className={styles["ceremony-calendar__title"]}>{t("ceremony.october")}</h2>
 
           <ul className={styles["ceremony-calendar__days"]}>
             <li className={styles["ceremony-calendar__day"]}>
               <span>{t("ceremony.weeks.1")}</span>
-              <span>30</span>
+              <span>29</span>
             </li>
 
             <li className={styles["ceremony-calendar__day"]}>
               <span>{t("ceremony.weeks.2")}</span>
-              <span>9</span>
+              <span>30</span>
             </li>
 
             <li className={styles["ceremony-calendar__day"]}>
               <span>{t("ceremony.weeks.3")}</span>
-              <span>10</span>
+              <span>1</span>
             </li>
 
             <li className={styles["ceremony-calendar__day"]}>
               <span>{t("ceremony.weeks.4")}</span>
-              <span>11</span>
+              <span>2</span>
             </li>
 
             <li className={styles["ceremony-calendar__day"]}>
               <span>{t("ceremony.weeks.5")}</span>
-              <span>12</span>
+              <span>3</span>
             </li>
 
             <li className={cn(styles["ceremony-calendar__day"], styles["active"])}>
               <span>{t("ceremony.weeks.6")}</span>
-              <span>13</span>
+              <span>4</span>
             </li>
 
             <li className={styles["ceremony-calendar__day"]}>
               <span>{t("ceremony.weeks.7")}</span>
-              <span>14</span>
+              <span>5</span>
             </li>
           </ul>
         </div>
@@ -400,6 +399,55 @@ useEffect(() => {
           </form>
         </div>
       </section>
+
+      <Swiper
+          breakpoints={{
+            768: {
+              spaceBetween: 50,
+              slidesPerView: 3,
+            },
+            0: {
+              spaceBetween: 50,
+              slidesPerView: 1,
+            },
+          }}
+          spaceBetween={50}
+          slidesPerView={3}
+          className={styles["swiper"]}
+          allowTouchMove
+          modules={[Navigation]}
+          navigation={{ nextEl: "#swiper-next", prevEl: "#swiper-prev" }}
+        >
+          <SwiperSlide className={styles["swiper__item"]}>
+            <img className={styles["swiper__image"]} src={Gallery1Image} alt="" />
+          </SwiperSlide>
+          <SwiperSlide className={styles["swiper__item"]}>
+            <img className={styles["swiper__image"]} src={Gallery5Image} alt="" />
+          </SwiperSlide>
+          <SwiperSlide className={styles["swiper__item"]}>
+            <img className={styles["swiper__image"]} src={Gallery2Image} alt="" />
+          </SwiperSlide>
+          <SwiperSlide className={styles["swiper__item"]}>
+            <img className={styles["swiper__image"]} src={Gallery3Image} alt="" />
+          </SwiperSlide>
+          <SwiperSlide className={styles["swiper__item"]}>
+            <img className={styles["swiper__image"]} src={Gallery6Image} alt="" />
+          </SwiperSlide>
+          <SwiperSlide className={styles["swiper__item"]}>
+            <img className={styles["swiper__image"]} src={Gallery4Image} alt="" />
+          </SwiperSlide>
+          
+        </Swiper>
+
+        <div className={styles["swiper-actions"]}>
+          <button type="button" id="swiper-prev" className={styles["swiper-actions__button"]}>
+            <CircledChevronLeftIcon />
+          </button>
+
+          <button type="button" id="swiper-next" className={styles["swiper-actions__button"]}>
+            <CircledChevronRightIcon />
+          </button>
+        </div>
 
       {isOpenedModal && (
         <div className={styles["success-modal"]}>
