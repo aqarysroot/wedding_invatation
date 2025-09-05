@@ -37,7 +37,7 @@ export const App: FunctionComponent = () => {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
-    const ceremonyDate = new Date('2025-10-04T18:00:00').getTime();
+    const ceremonyDate = new Date('2025-09-13T17:00:00').getTime();
 
     const updateCountdown = () => {
       const now = new Date().getTime();
@@ -233,11 +233,11 @@ useEffect(() => {
   </p> */}
 </div>
 
-<div className={styles.datePill}>
+{/* <div className={styles.datePill}>
   <span className={styles.dateWord}>{t("main.saturday")}</span>
   <span className={styles.dateNum}>4</span>
   <span className={styles.dateWord}>{t("main.october")}</span>
-</div>
+</div> */}
       </section>
 
       {/* <section ref={invitionRef} id="invition" className={styles["about"]}>
@@ -255,7 +255,7 @@ useEffect(() => {
       <section ref={dateRef} id="date" className={styles["ceremony"]}>
 
         <h2 className={styles["ceremony__title"]}>{t("ceremony.title")}</h2>
-        <h2 className={styles["ceremony__date"]}>04.10.2025</h2>
+        <h2 className={styles["ceremony__date"]}>13.09.2025</h2>
 
         <div className={styles["ceremony-calendar"]}>
           <h2 className={styles["ceremony-calendar__title"]}>{t("ceremony.october")}</h2>
@@ -268,39 +268,39 @@ useEffect(() => {
 
             <li className={styles["ceremony-calendar__day"]}>
               <span>{t("ceremony.weeks.2")}</span>
-              <span>31</span>
+              <span>9</span>
             </li>
 
             <li className={styles["ceremony-calendar__day"]}>
               <span>{t("ceremony.weeks.3")}</span>
-              <span>1</span>
+              <span>10</span>
             </li>
 
             <li className={styles["ceremony-calendar__day"]}>
               <span>{t("ceremony.weeks.4")}</span>
-              <span>2</span>
+              <span>11</span>
             </li>
 
             <li className={styles["ceremony-calendar__day"]}>
               <span>{t("ceremony.weeks.5")}</span>
-              <span>3</span>
+              <span>12</span>
             </li>
 
             <li className={cn(styles["ceremony-calendar__day"], styles["active"])}>
               <span>{t("ceremony.weeks.6")}</span>
-              <span>4</span>
+              <span>13</span>
             </li>
 
             <li className={styles["ceremony-calendar__day"]}>
               <span>{t("ceremony.weeks.7")}</span>
-              <span>5</span>
+              <span>14</span>
             </li>
           </ul>
         </div>
 
         <div className={styles["ceremony__time"]}>
           <p>{t("ceremony.start")}</p>
-          <span>18:00</span>
+          <span>17:00</span>
         </div>
 
         <div className={styles.ceremony}>
@@ -336,10 +336,10 @@ useEffect(() => {
 
         <h2 className={styles["address__title"]}>{t("address.title")}</h2>
         <div className={styles["address__content"]}>
-          <p>{t("address.content.slice_1")}</p>
-          <p>{t("address.content.slice_2")}</p>
+          <p className={styles["address__title"]} >{t("address.content.slice_1")}</p>
+          <p className={styles["address__title"]} >{t("address.content.slice_2")}</p>
           <p className={styles["colored"]}>{t("address.content.slice_3")}</p>
-          <p>{t("address.content.slice_4")}</p>
+          <p className={styles["address__title"]} >{t("address.content.slice_4")}</p>
         </div>
           
         <div className={styles["address__map"]}>
