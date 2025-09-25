@@ -22,6 +22,7 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import i18n from "./i18n";
 import { sendForm } from "./api/form";
+import Map from "@/components/Map.tsx";
 
 
 export const App: FunctionComponent = () => {
@@ -342,15 +343,7 @@ useEffect(() => {
         </div>
           
         <div className={styles["address__map"]}>
-          <iframe
-            src="https://www.google.com/maps?q=43.245887,76.916869&z=18&hl=ru&output=embed"
-            width="600" 
-            height="450"  
-            style={{ border: "0" }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
+          <Map />
         </div>
       </section>
 
